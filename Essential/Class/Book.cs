@@ -8,6 +8,7 @@ namespace Essential.Tasks
     //Выведите на экран разными цветами при помощи метода Show() название книги, имя автора и содержание.
     //add 1
     //add 2
+    //add 3
     class Program
     {
         public partial class Book
