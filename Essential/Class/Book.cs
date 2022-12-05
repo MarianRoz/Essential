@@ -5,6 +5,8 @@ namespace Essential.Class
     {
         public Book()
         {
+            Console.WriteLine("Hello Marian");
+            //add
         }
     }
 }
