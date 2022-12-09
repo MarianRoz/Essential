@@ -7,8 +7,10 @@
 
   <ItemGroup>
     <None Remove="Class\" />
+    <None Remove="Inheritance\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Class\" />
+    <Folder Include="Inheritance\" />
   </ItemGroup>
 </Project>
