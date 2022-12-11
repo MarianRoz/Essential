@@ -17,7 +17,7 @@ namespace Essential.Inheritance
         public int speed;
         public int year;
     }
-    public class Plane : Vehicle
+    class Plane : Vehicle
     {
         public Plane(int prise, int speed, int year)
         {
