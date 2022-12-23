@@ -6,6 +6,9 @@ namespace Essential.StaticClasses
     //Требуется:
     //Создать статический класс FindAndReplaceManager с методом void FindNext(string str) для поиска по книге из примера урока 005_Delegation.
     //При вызове этого метода, производится последовательный поиск строки в книге.
+    //Задание 3
+    //Используя Visual Studio, создайте проект по шаблону Console Application.
+    //Расширьте пример урока 005_Delegation, создав в классе Book, вложенный класс Notes, который позволит сохранять заметки читателя.
 
     class FindAndReplaceManager
     {
@@ -14,16 +17,16 @@ namespace Essential.StaticClasses
             switch (line)
             {
                 case "1":
-                    Console.WriteLine("The first line");
+                    Console.WriteLine(line = "The first line");
                     break;
                 case "2":
-                    Console.WriteLine("The second line");
+                    Console.WriteLine(line = "The second line");
                     break;
                 case "3":
-                    Console.WriteLine("The tree line");
+                    Console.WriteLine(line = "The tree line");
                     break;
                 case "4":
-                    Console.WriteLine("The tree line");
+                    Console.WriteLine(line = "The tree line");
                     break;
 
                 default:
@@ -35,10 +38,21 @@ namespace Essential.StaticClasses
     }
     class Book
     {
-        public string FindNext(string line)
+        public class Notes
         {
-            FindAndReplaceManager findAndReplaceManager = new FindAndReplaceManager();
-            return findAndReplaceManager.FindNext(line);
+            string addText;
+            public string Note
+            {
+                get
+                { return addText; }
+                set
+                { addText += "\n"; addText += value; }
+            }
+            public string FindNext(string line)
+            {
+                FindAndReplaceManager findAndReplaceManager = new FindAndReplaceManager();
+                return findAndReplaceManager.FindNext(line);
+            }
         }
     }
 }
