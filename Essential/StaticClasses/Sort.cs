@@ -7,7 +7,7 @@ namespace Essential.StaticClasses
 
     public static class Sort
     {
-        public static void Sorted(int[] ar)
+        public static void Sorted(this int[] ar)
         {
             for (int i = 0; i < ar.Length; i++)
             {
