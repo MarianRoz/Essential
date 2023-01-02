@@ -78,12 +78,12 @@ namespace Essential.Structures
             {
                 if (train[i].Number == number)
                 {
-                    Console.WriteLine($"\nПоїзд прямує на {train[i].Name}, номер поїзда {train[i].Number}, час відправлення {train[i].Time}");
+                    Console.WriteLine($"\nThe train goes to {train[i].Name}, train number {train[i].Number}, departure time {train[i].Time}");
                     ok = true;
                 }
             }
             if (ok == false)
-            { Console.WriteLine("Такого поїзда не існує"); }
+            { Console.WriteLine("This train non exist"); }
         }
     }
 }
