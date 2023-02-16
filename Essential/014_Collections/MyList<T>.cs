@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Essential._Collections
@@ -12,7 +13,7 @@ namespace Essential._Collections
     //и свойство только для чтения для получения общего количества элементов.
     //Реализуйте возможность перебора элементов коллекции в цикле foreach.
     
-    class MyList1<T>
+    class MyList1<T> : IEnumerable<T>
     {
         int positions = -1;
         T[] array = new T[0];
@@ -51,6 +52,10 @@ namespace Essential._Collections
                     yield break;
                 }
             }
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
